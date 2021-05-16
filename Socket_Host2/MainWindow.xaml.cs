@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,11 +15,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Net;
-using System.Net.Sockets;
-using System.Threading;
 
-namespace Socket_Host1
+namespace Socket_Host2
 {
     /// <summary>
     /// Logica di interazione per MainWindow.xaml
@@ -31,7 +31,7 @@ namespace Socket_Host1
         {
             InitializeComponent();
 
-            IPEndPoint localendpoint = new IPEndPoint(IPAddress.Parse("192.168.1.127"), 56000);
+            IPEndPoint localendpoint = new IPEndPoint(IPAddress.Parse("192.168.1.127"), 57000);
 
             Thread t1 = new Thread(new ParameterizedThreadStart(SocketReceive));
 
@@ -78,7 +78,7 @@ namespace Socket_Host1
         {
             lstRicezione.Items.Add("You: \t" + txtMsg.Text);
             Messaggi++;
-            
+
 
             Comunicazione(txtMsg.Text);
         }
@@ -156,11 +156,10 @@ namespace Socket_Host1
         private void btnDadi_Click(object sender, RoutedEventArgs e)
         {
             Random rdn = new Random();
-            
+
             int i = rdn.Next(0, 5);
 
-            lstRicezione.Items.Add(i);
-            if(i % 2 == 0)
+            if (i % 2 == 0)
             {
                 imgScelta.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\x.png");
                 Comunicazione("x");
@@ -170,11 +169,6 @@ namespace Socket_Host1
                 imgScelta.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\o.png");
                 Comunicazione("o");
             }
-        }
-
-        private void btnConferma_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
