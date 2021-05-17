@@ -38,7 +38,7 @@
             <Image x:Name="img7" HorizontalAlignment="Left" Height="84" VerticalAlignment="Top" Width="79" Margin="19,178,0,0"/>
             <Image x:Name="img8" HorizontalAlignment="Left" Height="84" VerticalAlignment="Top" Width="72" Margin="98,178,0,0"/>
             <Image x:Name="img9" HorizontalAlignment="Left" Height="84" VerticalAlignment="Top" Width="78" Margin="170,178,0,0"/>
-            <Grid x:Name="grdScelta" HorizontalAlignment="Left" Height="272" VerticalAlignment="Top" Width="407" Background="White">
+            <Grid x:Name="grdScelta" HorizontalAlignment="Left" Height="272" VerticalAlignment="Top" Width="407" Background="White" Visibility="Hidden">
                 <Button x:Name="btnDadi" Content="Lancia i dadi" HorizontalAlignment="Left" Margin="316,10,0,0" VerticalAlignment="Top" Width="81" Click="btnDadi_Click"/>
                 <Image x:Name="imgScelta" HorizontalAlignment="Left" Height="252" Margin="10,10,0,0" VerticalAlignment="Top" Width="301"/>
                 <Button x:Name="btnConferma" Content="Conferma" HorizontalAlignment="Left" Margin="316,45,0,0" VerticalAlignment="Top" Width="81" Click="btnConferma_Click"/>

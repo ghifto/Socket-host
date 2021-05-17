@@ -23,6 +23,7 @@ namespace Socket_Host2
     /// </summary>
     public partial class MainWindow : Window
     {
+        public string caracter = null;
         public IPAddress ipDest;
         public int Messaggi = 0;
         public int portDest;
@@ -30,6 +31,8 @@ namespace Socket_Host2
         public MainWindow()
         {
             InitializeComponent();
+
+            grdScelta.Visibility = Visibility.Visible;
 
             IPEndPoint localendpoint = new IPEndPoint(IPAddress.Parse("192.168.1.127"), 57000);
 
@@ -65,9 +68,7 @@ namespace Socket_Host2
 
                         this.Dispatcher.BeginInvoke(new Action(() =>
                         {
-                            lstRicezione.Items.Add("Him: \t" + message);
-                            Messaggi++;
-                            lstRicezione.SelectedItem = Messaggi;
+                            Ricevi(message);
                         }));
                     }
                 }
@@ -81,6 +82,25 @@ namespace Socket_Host2
 
 
             Comunicazione(txtMsg.Text);
+        }
+        public void Ricevi(string text)
+        {
+            if (text == "o")
+                imgScelta.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\x.png");
+            else if (text == "x")
+                imgScelta.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\o.png");
+            else if (text == "Confirmed: o")
+            {
+                caracter = "x";
+                grdScelta.Visibility = Visibility.Hidden;
+            }
+            else if (text == "Confirmed: x")
+            {
+                caracter = "o";
+                grdScelta.Visibility = Visibility.Hidden;
+            }
+            else
+                lstRicezione.Items.Add("Him: \t" + text);
         }
         public void Comunicazione(string text)
         {
@@ -109,47 +129,74 @@ namespace Socket_Host2
         #region Bottoni Controllo
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-            img1.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\x.png");
+            if (caracter == "o")
+                img1.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\o.png");
+            else
+                img1.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\x.png");
         }
 
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
-
+            if (caracter == "o")
+                img2.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\o.png");
+            else
+                img2.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\x.png");
         }
 
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
-
+            if (caracter == "o")
+                img3.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\o.png");
+            else
+                img3.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\x.png");
         }
 
         private void btn4_Click(object sender, RoutedEventArgs e)
         {
-
+            if (caracter == "o")
+                img4.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\o.png");
+            else
+                img4.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\x.png");
         }
 
         private void btn5_Click(object sender, RoutedEventArgs e)
         {
-
+            if (caracter == "o")
+                img5.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\o.png");
+            else
+                img5.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\x.png");
         }
 
         private void btn6_Click(object sender, RoutedEventArgs e)
         {
-
+            if (caracter == "o")
+                img6.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\o.png");
+            else
+                img6.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\x.png");
         }
 
         private void btn7_Click(object sender, RoutedEventArgs e)
         {
-
+            if (caracter == "o")
+                img7.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\o.png");
+            else
+                img7.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\x.png");
         }
 
         private void btn8_Click(object sender, RoutedEventArgs e)
         {
-
+            if (caracter == "o")
+                img8.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\o.png");
+            else
+                img8.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\x.png");
         }
 
         private void btn9_Click(object sender, RoutedEventArgs e)
         {
-
+            if (caracter == "o")
+                img9.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\o.png");
+            else
+                img9.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\x.png");
         }
         #endregion
 

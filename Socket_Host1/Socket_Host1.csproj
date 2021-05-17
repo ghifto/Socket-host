@@ -101,5 +101,14 @@
     <Resource Include="Resurce\Images\o.png" />
     <Resource Include="Resurce\Images\x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SocketClassi\SocketClassi.csproj">
+      <Project>{07da5cc6-9ab5-47f1-a484-86e4b1850d8c}</Project>
+      <Name>SocketClassi</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

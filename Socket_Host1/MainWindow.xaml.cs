@@ -23,6 +23,7 @@ namespace Socket_Host1
     /// </summary>
     public partial class MainWindow : Window
     {
+        public string DatiRisultato;
         public IPAddress ipDest;
         public int Messaggi = 0;
         public int portDest;
@@ -30,6 +31,8 @@ namespace Socket_Host1
         public MainWindow()
         {
             InitializeComponent();
+
+            grdScelta.Visibility = Visibility.Visible;
 
             IPEndPoint localendpoint = new IPEndPoint(IPAddress.Parse("192.168.1.127"), 56000);
 
@@ -109,47 +112,74 @@ namespace Socket_Host1
         #region Bottoni Controllo
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-            img1.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\x.png");
+            if(DatiRisultato == "o")
+                img1.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\o.png");
+            else
+                img1.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\x.png");
         }
 
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
-
+            if (DatiRisultato == "o")
+                img2.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\o.png");
+            else
+                img2.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\x.png");
         }
 
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
-
+            if (DatiRisultato == "o")
+                img3.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\o.png");
+            else
+                img3.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\x.png");
         }
 
         private void btn4_Click(object sender, RoutedEventArgs e)
         {
-
+            if (DatiRisultato == "o")
+                img4.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\o.png");
+            else
+                img4.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\x.png");
         }
 
         private void btn5_Click(object sender, RoutedEventArgs e)
         {
-
+            if (DatiRisultato == "o")
+                img5.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\o.png");
+            else
+                img5.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\x.png");
         }
 
         private void btn6_Click(object sender, RoutedEventArgs e)
         {
-
+            if (DatiRisultato == "o")
+                img6.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\o.png");
+            else
+                img6.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\x.png");
         }
 
         private void btn7_Click(object sender, RoutedEventArgs e)
         {
-
+            if (DatiRisultato == "o")
+                img7.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\o.png");
+            else
+                img7.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\x.png");
         }
 
         private void btn8_Click(object sender, RoutedEventArgs e)
         {
-
+            if (DatiRisultato == "o")
+                img8.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\o.png");
+            else
+                img8.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\x.png");
         }
 
         private void btn9_Click(object sender, RoutedEventArgs e)
         {
-
+            if (DatiRisultato == "o")
+                img9.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\o.png");
+            else
+                img9.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\x.png");
         }
         #endregion
 
@@ -164,17 +194,20 @@ namespace Socket_Host1
             {
                 imgScelta.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\x.png");
                 Comunicazione("x");
+                DatiRisultato = "x";
             }
             else
             {
                 imgScelta.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\o.png");
                 Comunicazione("o");
+                DatiRisultato = "o";
             }
         }
 
         private void btnConferma_Click(object sender, RoutedEventArgs e)
         {
-
+            Comunicazione("Confirmed: " + DatiRisultato);
+            grdScelta.Visibility = Visibility.Hidden;
         }
     }
 }
