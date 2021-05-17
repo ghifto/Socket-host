@@ -112,10 +112,15 @@ namespace Socket_Host1
         #region Bottoni Controllo
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
+            bool vincita = false;
+            string vincitore = null; 
             if(DatiRisultato == "o")
                 img1.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\o.png");
             else
                 img1.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Resurce\Images\x.png");
+            SocketClassi.InfGiochi.Controllo(ref vincita, ref vincitore);
+            if (vincitore == DatiRisultato && vincita == true)
+                MessageBox.Show("OK");
         }
 
         private void btn2_Click(object sender, RoutedEventArgs e)

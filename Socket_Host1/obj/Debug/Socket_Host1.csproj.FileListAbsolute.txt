@@ -28,3 +28,6 @@ C:\Users\PC\OneDrive\Documenti\GitHub\SocketHost\Socket-host\Socket_Host1\obj\De
 C:\Users\PC\OneDrive\Documenti\GitHub\SocketHost\Socket-host\Socket_Host1\obj\Debug\Socket_Host1.csproj.CoreCompileInputs.cache
 C:\Users\PC\OneDrive\Documenti\GitHub\SocketHost\Socket-host\Socket_Host1\obj\Debug\Socket_Host1.exe
 C:\Users\PC\OneDrive\Documenti\GitHub\SocketHost\Socket-host\Socket_Host1\obj\Debug\Socket_Host1.pdb
+C:\Users\PC\OneDrive\Documenti\GitHub\SocketHost\Socket-host\Socket_Host1\bin\Debug\SocketClassi.dll
+C:\Users\PC\OneDrive\Documenti\GitHub\SocketHost\Socket-host\Socket_Host1\bin\Debug\SocketClassi.pdb
+C:\Users\PC\OneDrive\Documenti\GitHub\SocketHost\Socket-host\Socket_Host1\obj\Debug\Socket_Host1.csproj.CopyComplete

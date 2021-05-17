@@ -13,3 +13,6 @@ C:\Users\PC\OneDrive\Documenti\GitHub\SocketHost\Socket-host\Socket_Host2\obj\De
 C:\Users\PC\OneDrive\Documenti\GitHub\SocketHost\Socket-host\Socket_Host2\obj\Debug\Socket_Host2.csproj.CoreCompileInputs.cache
 C:\Users\PC\OneDrive\Documenti\GitHub\SocketHost\Socket-host\Socket_Host2\obj\Debug\Socket_Host2.exe
 C:\Users\PC\OneDrive\Documenti\GitHub\SocketHost\Socket-host\Socket_Host2\obj\Debug\Socket_Host2.pdb
+C:\Users\PC\OneDrive\Documenti\GitHub\SocketHost\Socket-host\Socket_Host2\bin\Debug\SocketClassi.dll
+C:\Users\PC\OneDrive\Documenti\GitHub\SocketHost\Socket-host\Socket_Host2\bin\Debug\SocketClassi.pdb
+C:\Users\PC\OneDrive\Documenti\GitHub\SocketHost\Socket-host\Socket_Host2\obj\Debug\Socket_Host2.csproj.CopyComplete

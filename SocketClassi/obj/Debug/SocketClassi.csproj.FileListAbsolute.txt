@@ -1,0 +1,6 @@
+C:\Users\PC\OneDrive\Documenti\GitHub\SocketHost\Socket-host\SocketClassi\bin\Debug\SocketClassi.dll
+C:\Users\PC\OneDrive\Documenti\GitHub\SocketHost\Socket-host\SocketClassi\bin\Debug\SocketClassi.pdb
+C:\Users\PC\OneDrive\Documenti\GitHub\SocketHost\Socket-host\SocketClassi\obj\Debug\SocketClassi.csprojAssemblyReference.cache
+C:\Users\PC\OneDrive\Documenti\GitHub\SocketHost\Socket-host\SocketClassi\obj\Debug\SocketClassi.csproj.CoreCompileInputs.cache
+C:\Users\PC\OneDrive\Documenti\GitHub\SocketHost\Socket-host\SocketClassi\obj\Debug\SocketClassi.dll
+C:\Users\PC\OneDrive\Documenti\GitHub\SocketHost\Socket-host\SocketClassi\obj\Debug\SocketClassi.pdb
