@@ -110,5 +110,11 @@
       <Name>SocketClassi</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resurce\Images\oV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resurce\Images\xV.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
